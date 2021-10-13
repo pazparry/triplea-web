@@ -6,21 +6,116 @@
 }
 
 body {
-    background-color: var(--grey);
     font-family: 'Noto Sans Display', sans-serif;
+}
+
+body.dark-theme {
+    background-color: var(--grey);
     color: var(--white);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--grey);
+        color: var(--white);
+    }
+    body.light-theme {
+        color: var(--grey);
+        background-color: var(--white);
+    }
+    .card-text-services {
+        color: var(--white);
+    }
+    .item-menu {
+        color: var(--grey)
+    }
 }
 
 a {
     text-decoration: none;
 }
 
+.item-menu {
+    color: var(--white)
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 43px;
+    height: 19px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 3px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
 .image-header {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0.5)), url(../../assets/img/background.jpg);
+    background-image: url(../../assets/img/background2-header.png);
     background-size: cover;
-    background-position: top;
+    background-position: bottom;
     background-repeat: no-repeat;
-    height: 800px;
+    height: 650px;
     margin-top: 0px;
 }
 
@@ -30,13 +125,25 @@ a {
     margin: auto;
     display: block;
     padding-top: 16rem;
-    width: 20%;
+    width: 30%;
 }
 
 #anim {
     width: 100%;
     height: 100%;
     margin: 0 auto;
+}
+
+h1 {
+    color: var(--white);
+}
+
+.color-white {
+    color: var(--white);
+}
+
+.color-gray {
+    color: var(--grey);
 }
 
 h3 {
@@ -51,21 +158,26 @@ h3,
 h4 {
     text-align: center;
     font-weight: 500;
-    color: #f0f8ff;
+}
+
+p {
+    font-size: 1.2rem;
 }
 
 .text-blue {
-    color: #0094FF;
+    font-size: 1.2rem;
+    color: var(--blue);
     text-decoration: none;
 }
 
 hr {
     height: 4px;
-    background-color: var(--lightblue);
+    background-color: var(--blue);
     width: 60px;
     border-radius: 1.75rem;
     margin: 0 auto;
-    border: 3px solid var(--lightblue);
+    border: 3px solid var(--blue);
+    opacity: 1;
 }
 
 .nosotros {
@@ -79,9 +191,10 @@ hr {
 }
 
 #servicios {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/triplea/assets/img/background.jpg);
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 5rem 0rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: top;
 }
 
 .card-servicios {
@@ -94,13 +207,23 @@ hr {
     border-radius: .25rem;
 }
 
+.card-title-services {
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
 .card-servicios-img-top {
-    width: 150px;
+    width: 90px;
 }
 
 #clientes {
     padding-top: 5rem;
     padding-bottom: 5rem;
+}
+
+.carousel-chevron {
+    width: 1rem;
+    height: 1rem;
 }
 
 .item-active img .item img {
@@ -109,11 +232,13 @@ hr {
 }
 
 .carousel-indicators .active {
-    color: #3255e3;
+    color: var(--blue);
 }
 
 #proyectos {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/triplea/assets/img/background2.jpg);
+    /* background-image: url(/triplea/assets/img/background-proyectos.png); */
+    /* background-size: 50%; */
+    width: 100%;
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
@@ -128,22 +253,26 @@ hr {
     background-clip: border-box;
 }
 
+.card-body {
+    text-align: center;
+}
+
 .card-title {
     margin-bottom: .5rem;
-    color: #009BFF;
+    color: var(--blue);
     font-weight: 500;
 }
 
 .card-text-services {
-    color: whitesmoke;
+    color: var(--grey);
     font-weight: 300;
     font-size: 1rem;
     text-align: center;
 }
 
 .card-text {
-    color: var(--white);
     font-weight: 300;
+    font-size: 0.95rem;
 }
 
 #contacto {
@@ -152,7 +281,7 @@ hr {
 }
 
 .text-area {
-    height: 80%;
+    height: 9em;
     width: 100%;
     resize: none;
 }
@@ -163,8 +292,8 @@ input {
     border: 2px solid var(--white);
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
+    /* margin: 8px 0; */
+    display: flex;
     border-radius: 4px;
     box-sizing: border-box;
     font-weight: 300;
@@ -177,24 +306,75 @@ input {
     background: rgb(25, 67, 144);
     background: linear-gradient(45deg, rgba(25, 67, 144, 1) 0%, rgba(0, 155, 255, 1) 100%);
     border-radius: 2rem;
-    padding: 0.5rem 12rem;
+    padding: 0.5rem 9rem;
     border-color: transparent;
 }
 
+.logo-footer {
+    width: 40%;
+    margin-bottom: 3rem;
+}
+
 .rrss-footer {
-    color: var(--white);
+    color: var(--blue);
     text-decoration: none;
+    cursor: pointer;
+}
+
+.rrss-footer:hover {
+    color: var(--lightblue);
+}
+
+.footer-info {
+    color: var(--blue);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.color {
+    padding-top: 0.5rem;
+    margin-top: 3rem;
+    background: rgb(25, 67, 144);
+    background: linear-gradient(45deg, rgba(25, 67, 144, 1) 0%, rgba(0, 155, 255, 1) 100%);
 }
 
 @media screen and (max-width: 576px) {
+    h5 {
+        font-size: 0.9rem;
+    }
     .image-header img {
-        width: 20%;
+        width: 80%;
     }
     .logo-header {
         width: 20%;
     }
     .nosotros {
         margin: 0 2rem;
+    }
+    .texto-nosotros {
+        padding: 4px;
+    }
+    #servicios {
+        background-image: none;
+        /* padding: 1rem; */
+    }
+    #contacto-rrss {
+        display: none;
+    }
+    .submit {
+        padding: 0.5rem 5rem;
+    }
+    #input2 {
+        display: none;
+    }
+    #input3 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 577px) {
+    #input3 {
+        display: none;
     }
 }
 
