@@ -1,6 +1,21 @@
 const boton = document.querySelector('#toggle');
 
 function cambiarImagen() {
+    const configUser = window.matchMedia('(prefers-color-scheme: dark)');
+    // console.log(configUser.matches)
+    let colorTema;
+
+    if (configUser.matches) {
+        //Entramos con modo oscuro
+        document.body.classList.toggle('light-theme')
+        colorTema = document.body.classList.contains('light-theme') ? 'light' : 'dark'
+    } else {
+        document.body.classList.toggle('dark-theme')
+        colorTema = document.body.classList.contains('dark-theme') ? 'dark' : 'light'
+    }
+
+    localStorage.setItem('tema', colorTema);
+
     const localConfig = localStorage.getItem('tema');
 
     if (localConfig === 'dark') {
@@ -54,20 +69,9 @@ function cambiarImagen() {
 
 
 boton.addEventListener('click', () => {
-    const configUser = window.matchMedia('(prefers-color-scheme: dark)');
-    // console.log(configUser.matches)
-    let colorTema;
 
-    if (configUser.matches) {
-        //Entramos con modo oscuro
-        document.body.classList.toggle('light-theme')
-        colorTema = document.body.classList.contains('light-theme') ? 'light' : 'dark'
-    } else {
-        document.body.classList.toggle('dark-theme')
-        colorTema = document.body.classList.contains('dark-theme') ? 'dark' : 'light'
-    }
-
-    localStorage.setItem('tema', colorTema);
     cambiarImagen();
 
 })
+
+cambiarImagen();
