@@ -23,6 +23,9 @@ function cambiarImagen() {
         var foto6 = document.getElementById("foto6");
         foto6.src = "assets/img/inteligencia-artificial.svg";
 
+        var logo_pie = document.getElementById("logo_pie");
+        logo_pie.src = "assets/img/logo-triplea.svg";
+
     } else if (localConfig === 'light') {
 
         var foto1 = document.getElementById("foto1");
@@ -42,6 +45,9 @@ function cambiarImagen() {
 
         var foto6 = document.getElementById("foto6");
         foto6.src = "assets/img/inteligencia-artificial-light.svg";
+
+        var logo_pie = document.getElementById("logo_pie");
+        logo_pie.src = "assets/img/logo-triplea-light.svg";
     }
 
 }
