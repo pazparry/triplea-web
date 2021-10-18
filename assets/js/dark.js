@@ -6,48 +6,48 @@ function cambiarImagen() {
     if (localConfig === 'dark') {
 
         var foto1 = document.getElementById("foto1");
-        foto1.src = "assets/img/desarrollo-software.svg";
+        foto1.src = "/assets/img/desarrollo-software.svg";
 
         var foto2 = document.getElementById("foto2");
-        foto2.src = "assets/img/servicios-cognitivos.svg";
+        foto2.src = "/assets/img/servicios-cognitivos.svg";
 
         var foto3 = document.getElementById("foto3");
-        foto3.src = "assets/img/inteligencia-artificial.svg";
+        foto3.src = "/assets/img/inteligencia-artificial.svg";
 
         var foto4 = document.getElementById("foto4");
-        foto4.src = "assets/img/inteligencia-artificial.svg";
+        foto4.src = "/assets/img/inteligencia-artificial.svg";
 
         var foto5 = document.getElementById("foto5");
-        foto5.src = "assets/img/inteligencia-artificial.svg";
+        foto5.src = "/assets/img/inteligencia-artificial.svg";
 
         var foto6 = document.getElementById("foto6");
-        foto6.src = "assets/img/inteligencia-artificial.svg";
+        foto6.src = "/assets/img/inteligencia-artificial.svg";
 
         var logo_pie = document.getElementById("logo_pie");
-        logo_pie.src = "assets/img/logo-triplea.svg";
+        logo_pie.src = "/assets/img/logo-triplea.svg";
 
     } else if (localConfig === 'light') {
 
         var foto1 = document.getElementById("foto1");
-        foto1.src = "assets/img/desarrollo-software-light.svg";
+        foto1.src = "/assets/img/desarrollo-software-light.svg";
 
         var foto2 = document.getElementById("foto2");
-        foto2.src = "assets/img/servicios-cognitivos-light.svg";
+        foto2.src = "/assets/img/servicios-cognitivos-light.svg";
 
         var foto3 = document.getElementById("foto3");
-        foto3.src = "assets/img/inteligencia-artificial-light.svg";
+        foto3.src = "/assets/img/inteligencia-artificial-light.svg";
 
         var foto4 = document.getElementById("foto4");
-        foto4.src = "assets/img/inteligencia-artificial-light.svg";
+        foto4.src = "/assets/img/inteligencia-artificial-light.svg";
 
         var foto5 = document.getElementById("foto5");
-        foto5.src = "assets/img/inteligencia-artificial-light.svg";
+        foto5.src = "/assets/img/inteligencia-artificial-light.svg";
 
         var foto6 = document.getElementById("foto6");
-        foto6.src = "assets/img/inteligencia-artificial-light.svg";
+        foto6.src = "/assets/img/inteligencia-artificial-light.svg";
 
         var logo_pie = document.getElementById("logo_pie");
-        logo_pie.src = "assets/img/logo-triplea-light.svg";
+        logo_pie.src = "/assets/img/logo-triplea-light.svg";
     }
 
 }
