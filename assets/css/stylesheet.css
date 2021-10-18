@@ -111,7 +111,7 @@ input:checked+.slider:before {
 }
 
 .image-header {
-    background-image: url(/assets/img/background2-header.png);
+    background-image: url(../img/background2-header.png);
     /* background-image: url(../assets/img/background2-header.png); */
     background-size: cover;
     background-position: bottom;
