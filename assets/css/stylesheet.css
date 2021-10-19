@@ -252,6 +252,7 @@ hr {
     word-wrap: break-word;
     background-color: transparent;
     background-clip: border-box;
+    border-color: transparent;
 }
 
 .card-body {
@@ -324,6 +325,18 @@ input {
 
 .rrss-footer:hover {
     color: var(--lightblue);
+}
+
+.rrss {
+    color: var(--blue);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.rrss:hover {
+    border-bottom: solid;
+    border-color: transparent;
+    font-size: 1em;
 }
 
 .footer-info {
