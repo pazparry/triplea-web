@@ -41,6 +41,9 @@ function cambiarImagen() {
         var logo_pie = document.getElementById("logo_pie");
         logo_pie.src = "assets/img/logo-triplea.svg";
 
+        var inacap = document.getElementById("inacap");
+        inacap.src = "assets/img/logo_clientes__0004_logo-blanco.png";
+
     } else if (localConfig === 'light') {
 
         var foto1 = document.getElementById("foto1");
@@ -63,6 +66,9 @@ function cambiarImagen() {
 
         var logo_pie = document.getElementById("logo_pie");
         logo_pie.src = "assets/img/logo-triplea-light.svg";
+
+        var inacap = document.getElementById("inacap");
+        inacap.src = "assets/img/logo_clientes__0003_inacap-negro.png";
     }
 
 }
